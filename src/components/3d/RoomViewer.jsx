@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { Environment, Center, PresentationControls, RandomizedLight, AccumulativeShadows } from "@react-three/drei"
+import { Environment, Center, PresentationControls } from "@react-three/drei"
 import { Canvas, useLoader } from "@react-three/fiber"
 import { Suspense } from 'react'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
@@ -60,10 +60,6 @@ function RoomViewer({ onClick }) {
                             </EffectComposer>
                         </Suspense>
                     </Center>
-
-                    {/* <AccumulativeShadows temporal frames={100} alphaTest={0.95} opacity={1} scale={10}>
-                        <RandomizedLight amount={8} radius={10} ambient={0.5} position={[0, 10, -2.5]} bias={0.001} size={3} />
-                    </AccumulativeShadows> */}
                 </group>
             </Canvas>
         </section>

@@ -4,7 +4,9 @@ function Footer() {
     return (
         <footer>
             <div>
-                <h4>FOOTER</h4>
+                <a href='https://github.com/EdelweissPirate/shopping-room-concept/tree/main/public/models' target='_blank'>
+                    <h3>© EdelweissPirate</h3>
+                </a>
             </div>
         </footer>
     )

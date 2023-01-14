@@ -1,22 +1,14 @@
-#item-viewer {
-    transform: translate(-100%, 0);
-}
-
-.btn-close{
-    position: absolute;
-    top: 2%;
-    right: 0
-}
-
 .item-layout {
-    /* height: 80%; */
+    max-width: 420px;
+    margin: auto;
     text-align: center;
     gap: 1rem;
     grid-template-areas: 
     "🔤 🔤"
     "🖼️ 🖼️"
     "💷 🌍"
-    "📝 📝";
+    "📝 📝"
+    "❌ ❌";
     grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
@@ -54,5 +46,9 @@
 
 .item-desc {
     grid-area: 📝;
-    font-size: large;
+    /* font-size: large; */
+}
+
+.item-close{
+    grid-area: ❌;
 }

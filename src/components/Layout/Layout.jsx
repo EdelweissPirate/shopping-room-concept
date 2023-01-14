@@ -4,6 +4,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import RoomViewer from "../3d/RoomViewer"
 import ItemViewer from "../ItemViewer/ItemViewer"
+import RoomSelector from "../RoomSelector/RoomSelector"
 
 function Layout() {
     const [activeItem, setActiveItem] = useState(null)
@@ -15,7 +16,6 @@ function Layout() {
     
         itemViewer.classList.remove('slide-out')
         itemViewer.classList.add('slide-in')
-        // console.log('currentItem: ', arg);
 
         const markers = document.querySelectorAll('.object-html-marker')
 
@@ -30,6 +30,7 @@ function Layout() {
     return (
         <>
             <Header />
+            <RoomSelector />
             <ItemViewer activeItem={activeItem} />
             <RoomViewer onClick={onClick} />
             <Footer />

@@ -91,6 +91,14 @@ a:visited {
     color: inherit;
 }
 
+#item-viewer {
+    transform: translate(-100%, 0);
+}
+
+#room-selector {
+    transform: translate(-100%, 0);
+}
+
 .bg-dark {
     color: #fff;
     background-color: rgba(11, 11, 11, 0.6);
@@ -108,6 +116,10 @@ a:visited {
     padding: 2rem 0rem;
     margin: auto;
     width: 80%
+}
+
+.w-fill {
+    width: 100%
 }
 
 .h-fill {
@@ -131,6 +143,10 @@ a:visited {
     align-content: center;
 }
 
+.space-around {
+    justify-content: space-around;
+}
+
 .relative {
     position: relative;
 }
@@ -143,11 +159,13 @@ a:visited {
     scale: 1;
     cursor: default;
     transition: all .5s;
+    /* opacity: .5; */
 }
 
 .object-html-marker:hover {
     scale: 1.5;
     cursor: pointer;
+    opacity: 1;
 }
 
 .btn {

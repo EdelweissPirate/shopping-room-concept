@@ -19,6 +19,16 @@
     animation: slide-out 1s ease-in-out forwards;
 }
 
+.slide-down {
+    transform: translate(0, -100%);
+    animation: slide-down 1s ease-in-out forwards;
+}
+
+.slide-up {
+    transform: translate(0, 0);
+    animation: slide-up 1s ease-in-out forwards;
+}
+
 /* Keyframes */
 @keyframes fade-in {
     from {
@@ -53,5 +63,23 @@
     }
     to {
         transform: translate(-100%, 0);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translate(0, -100%);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, -100%);
     }
 }
