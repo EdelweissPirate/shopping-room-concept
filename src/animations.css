@@ -1,0 +1,57 @@
+/* Anim classes */
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s linear forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fade-out 1s linear forwards;
+}
+
+.slide-in {
+    transform: translate(-100%, 0);
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+.slide-out {
+    transform: translate(0, 0);
+    animation: slide-out 1s ease-in-out forwards;
+}
+
+/* Keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translate(-100%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}

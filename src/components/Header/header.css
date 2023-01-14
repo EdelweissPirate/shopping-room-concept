@@ -1,0 +1,16 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+    z-index: 999;
+    padding: .5rem 0;
+    background-color: var(--bg-colour);
+}
+
+.header-holder {
+    width: 90%;
+    /* padding: .5rem 1rem; */
+    margin: auto;
+}
