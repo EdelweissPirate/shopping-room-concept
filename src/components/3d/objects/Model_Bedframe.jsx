@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF, Html } from '@react-three/drei'
 
 function Model_Bedframe(props) {
-  const { nodes, materials } = useGLTF('public/models/bedframe.glb')
+  const { nodes, materials } = useGLTF('/models/bedframe.glb')
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes.bedframe.geometry} material={materials.bedframeMat}>
@@ -20,6 +20,6 @@ function Model_Bedframe(props) {
   )
 }
 
-useGLTF.preload('public/models/bedframe.glb')
+useGLTF.preload('/models/bedframe.glb')
 
 export default Model_Bedframe
