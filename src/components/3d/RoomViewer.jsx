@@ -6,20 +6,20 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { RGBELoader } from 'three-stdlib'
 
 import CameraController from "./CameraController"
-import Model_Bedframe from "./models/Model_BedFrame"
-import Model_BedsideCabinet from "./models/Model_BedsideCabinet"
-import Model_Drawers from "./models/Model_Drawers"
-import Model_Duvet from "./models/Model_Duvet"
-import Model_Matress from "./models/Model_Matress"
-import Model_Pillows from "./models/Model_Pillows"
-import Model_Room from "./models/Model_Room"
-import Model_Rug from "./models/Model_Rug"
-import Model_Window from "./models/Model_Window"
-import Model_Shelves from "./models/Model_Shelves"
-import Model_Wardrobe from "./models/Model_Wardrobe"
-import Model_SquareShelves from "./models/Model_SquareShelves"
-import Model_UnderbedStorage from "./models/Model_UnderbedStorage"
-import Model_Frames from './models/Model_Frames'
+import Model_Bedframe from "./objects/Model_BedFrame"
+import Model_BedsideCabinet from "./objects/Model_BedsideCabinet"
+import Model_Drawers from "./objects/Model_Drawers"
+import Model_Duvet from "./objects/Model_Duvet"
+import Model_Matress from "./objects/Model_Matress"
+import Model_Pillows from "./objects/Model_Pillows"
+import Model_Room from "./objects/Model_Room"
+import Model_Rug from "./objects/Model_Rug"
+import Model_Window from "./objects/Model_Window"
+import Model_Shelves from "./objects/Model_Shelves"
+import Model_Wardrobe from "./objects/Model_Wardrobe"
+import Model_SquareShelves from "./objects/Model_SquareShelves"
+import Model_UnderbedStorage from "./objects/Model_UnderbedStorage"
+import Model_Frames from './objects/Model_Frames'
 
 function RoomViewer({ onClick }) {
     const camConfig = {
