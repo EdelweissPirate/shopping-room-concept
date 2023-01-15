@@ -7,6 +7,8 @@ function Header() {
         const roomSelector = document.querySelector('#room-selector')
         const itemViewer = document.querySelector('#item-viewer')
     
+        if(!roomSelector) return
+
         roomSelector.classList.remove('slide-up')
         roomSelector.classList.add('slide-down')
 

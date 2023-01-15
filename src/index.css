@@ -184,7 +184,7 @@ a:visited {
     padding: 1rem 1.5rem
 }
 
-.btn-round:hover {
+.btn-round:active {
     border-radius: 15px;
     border: 1px solid #fff;
     background-color: #fff;
