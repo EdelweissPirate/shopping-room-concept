@@ -1,6 +1,7 @@
-import { Center, Html, useProgress } from "@react-three/drei"
 import { Suspense } from 'react'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
+
+import Loader from '../../Loader/Loader'
 
 import Model_Bedframe from "../objects/Model_BedFrame"
 import Model_BedsideCabinet from "../objects/Model_BedsideCabinet"
@@ -18,51 +19,29 @@ import Model_UnderbedStorage from "../objects/Model_UnderbedStorage"
 import Model_Frames from '../objects/Model_Frames'
 
 function Room_GoldenHour({ onClick }) {
-    function Loader() {
-        const {
-            progress
-        } = useProgress()
-        
-        return (
-            <Html center>
-                <div className="flex flex-centre col w-fill">
-                    <div style={{textAlign: 'center', padding: '1rem'}}>
-                        <h1>LOADING</h1>
-                    </div>
-                    <div style={{backgroundColor: '#666', width: '220px'}}>
-                        <div 
-                            style={{height: '30px', backgroundColor: '#419D78', width: `${progress}%`}}
-                        ></div>
-                    </div>
-                </div>
-            </Html>
-        )
-    }
-    
     return (
         <group position={[0, 0, 0]}>
-            <Center>
-                <Suspense fallback={<Loader />}>
-                    <Model_Room />
-                    <Model_Window />
-                    <Model_Bedframe onClick={onClick} />
-                    <Model_Rug onClick={onClick} />
-                    <Model_Matress />
-                    <Model_Duvet onClick={onClick} />
-                    <Model_Pillows />
-                    <Model_BedsideCabinet onClick={onClick} />
-                    <Model_Drawers onClick={onClick} />
-                    <Model_Shelves onClick={onClick} />
-                    <Model_Wardrobe onClick={onClick} />
-                    <Model_SquareShelves onClick={onClick} />
-                    <Model_UnderbedStorage onClick={onClick} />
-                    <Model_Frames onClick={onClick} />
+            <Suspense fallback={<Loader />}>
+            
+                <Model_Room />
+                <Model_Window />
+                <Model_Bedframe onClick={onClick} />
+                <Model_Rug onClick={onClick} />
+                <Model_Matress />
+                <Model_Duvet onClick={onClick} />
+                <Model_Pillows />
+                <Model_BedsideCabinet onClick={onClick} />
+                <Model_Drawers onClick={onClick} />
+                <Model_Shelves onClick={onClick} />
+                <Model_Wardrobe onClick={onClick} />
+                <Model_SquareShelves onClick={onClick} />
+                <Model_UnderbedStorage onClick={onClick} />
+                <Model_Frames onClick={onClick} />
 
-                    <EffectComposer>
-                        <Bloom luminanceThreshold={1} intensity={0.85} levels={9} mipmapBlur />
-                    </EffectComposer>
-                </Suspense>
-            </Center>
+                <EffectComposer>
+                    <Bloom luminanceThreshold={1} intensity={0.85} levels={9} mipmapBlur />
+                </EffectComposer>
+            </Suspense>
         </group>
     )
 }

@@ -1,7 +1,7 @@
 export const handleFadeOut = (component, callback, navTo) => {
     if(component){
-        component.classList = ''
-        component.classList = 'fade-out'
+        component.classList.remove('fade-in')
+        component.classList.add('fade-out')
 
         if(callback){
             setTimeout(() => {

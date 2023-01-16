@@ -5,7 +5,10 @@
     --colour-2: #E0A458;
 }
 
-/* FONT!!! */
+@font-face {
+    font-family: 'FatSansRound';
+    src: url(./assets/FatSansRound.ttf);
+}
 
 * {
     margin: 0;
@@ -30,7 +33,7 @@ body {
     overflow: hidden;
     box-sizing: border-box;
 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'FatSansRound', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -147,8 +150,24 @@ a:visited {
     justify-content: space-around;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+.textCenter {
+    text-align: center;
+}
+
 .relative {
     position: relative;
+}
+
+.no-mouse {
+    user-select: none;
+}
+
+.text-xxl {
+    font-size: xx-large;
 }
 
 .object-html-marker {
