@@ -22,6 +22,6 @@ function Model_Wardrobe(props) {
   )
 }
 
-useGLTF.preload('/models/wardrobe.glb')
+//useGLTF.preload('/models/wardrobe.glb')
 
 export default Model_Wardrobe

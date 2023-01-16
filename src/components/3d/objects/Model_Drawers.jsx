@@ -22,6 +22,6 @@ function Model_Drawers(props) {
   )
 }
 
-useGLTF.preload('/models/drawers.glb')
+//useGLTF.preload('/models/drawers.glb')
 
 export default Model_Drawers

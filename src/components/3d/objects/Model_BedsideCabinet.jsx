@@ -21,6 +21,6 @@ function Model_BedsideCabinet(props) {
   )
 }
 
-useGLTF.preload('/models/bedsideCabinet.glb')
+//useGLTF.preload('/models/bedsideCabinet.glb')
 
 export default Model_BedsideCabinet

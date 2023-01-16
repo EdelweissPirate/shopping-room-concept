@@ -22,6 +22,6 @@ function Model_Frames(props) {
   )
 }
 
-useGLTF.preload('/models/frames.glb')
+//useGLTF.preload('/models/frames.glb')
 
 export default Model_Frames

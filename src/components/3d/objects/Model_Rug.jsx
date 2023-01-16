@@ -19,6 +19,6 @@ function Model_Rug(props) {
   )
 }
 
-useGLTF.preload('/models/rug.glb')
+//useGLTF.preload('/models/rug.glb')
 
 export default Model_Rug

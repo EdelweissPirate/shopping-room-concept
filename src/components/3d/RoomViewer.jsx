@@ -25,11 +25,11 @@ function RoomViewer({ onClick }) {
                 <spotLight color={'#FF9470'} position={[-8, 6, 0]} angle={0.3} penumbra={.2} intensity={1}/>
                 <Environment  near={1} far={1000} resolution={256} map={texture} />
 
-                {/* <Center> */}
-                    {/* <Suspense fallback={null}> */}
+                <Center>
+                    {/* <Suspense fallback={<Loader />}> */}
                         <Room_GoldenHour onClick={onClick} />
                     {/* </Suspense> */}
-                {/* </Center> */}
+                </Center>
             </Canvas>
         </section>
     )

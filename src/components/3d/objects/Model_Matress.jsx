@@ -14,6 +14,6 @@ function Model_Matress(props) {
   )
 }
 
-useGLTF.preload('/models/matress.glb')
+//useGLTF.preload('/models/matress.glb')
 
 export default Model_Matress

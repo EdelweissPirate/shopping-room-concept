@@ -20,6 +20,6 @@ function Model_Bedframe(props) {
   )
 }
 
-useGLTF.preload('/models/bedframe.glb')
+//useGLTF.preload('/models/bedframe.glb')
 
 export default Model_Bedframe

@@ -14,6 +14,6 @@ function Model_Pillows(props) {
   )
 }
 
-useGLTF.preload('/models/pillows.glb')
+//useGLTF.preload('/models/pillows.glb')
 
 export default Model_Pillows

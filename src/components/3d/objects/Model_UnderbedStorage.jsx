@@ -19,6 +19,6 @@ function Model_UnderbedStorage(props) {
   )
 }
 
-useGLTF.preload('/models/underbedStorage.glb')
+//useGLTF.preload('/models/underbedStorage.glb')
 
 export default Model_UnderbedStorage

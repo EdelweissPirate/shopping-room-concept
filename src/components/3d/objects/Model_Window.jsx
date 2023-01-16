@@ -18,6 +18,6 @@ function Model_Window(props) {
   )
 }
 
-useGLTF.preload('/models/window.glb')
+//useGLTF.preload('/models/window.glb')
 
 export default Model_Window

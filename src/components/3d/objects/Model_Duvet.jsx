@@ -20,6 +20,6 @@ function Model_Duvet(props) {
   )
 }
 
-useGLTF.preload('/models/duvet.glb')
+//useGLTF.preload('/models/duvet.glb')
 
 export default Model_Duvet

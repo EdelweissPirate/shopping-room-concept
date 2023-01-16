@@ -16,6 +16,6 @@ function Model_Room(props) {
   )
 }
 
-useGLTF.preload('/models/room.glb')
+//useGLTF.preload('/models/room.glb')
 
 export default Model_Room

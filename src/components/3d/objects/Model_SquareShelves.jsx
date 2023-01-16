@@ -20,6 +20,6 @@ function Model_SquareShelves(props) {
   )
 }
 
-useGLTF.preload('/models/squareShelves.glb')
+//useGLTF.preload('/models/squareShelves.glb')
 
 export default Model_SquareShelves
