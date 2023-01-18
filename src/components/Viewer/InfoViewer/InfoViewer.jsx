@@ -1,20 +1,24 @@
-import Wrapper from "../Wrapper/Wrapper"
-
 import './infoViewer.css'
 
 function InfoViewer() {
     return (
-        // <Wrapper>
             <div id="info-content">
                 <h2>INFO</h2>
+
+                <p>---</p>
                 <p>
-                    Click the icon to select a room.
+                    Click the bed icon in the header to select a room.
                 </p>
+                <p>---</p>
+
                 <p>
-                    Project created to showcase furniture by displaying them as they may be at home. I got the idea from seeing images on the IKEA website of vague suggestions of a bedroom and I thought it would be cool if that room actually existed for the user to experience. 
+                    This project was created to showcase furniture by displaying them as they may be within a home. I had the idea while looking at images on the IKEA website of vague suggestions of a bedroom and I thought it would be novel if that room actually existed for the user to experience. 
                 </p>
 
+                <p>---</p>
                 <h2>DEVELOPMENT</h2>
+                <p>---</p>
+
                 <p>
                     As I was storing and deploying on github I had to keep each individual file below 100Mb. This was mostly no issue until I tried adding the rug model. The texture and vertex count made it 107Mb so I had to reduce it's detail until it was as we have. 
                 </p>
@@ -30,13 +34,13 @@ function InfoViewer() {
                 <p>
                     Next, I'd like to fill the room with random junk to rally sell the realism and then add more rooms when i get the time. 
                 </p>
+                <p>---</p>
 
                 <p>
-                    -- END --
+                    END
                 </p>
 
             </div>
-        // </Wrapper>
     )
 }
 

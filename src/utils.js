@@ -24,3 +24,12 @@ export const switchClass = (component, newClass, callback, navTo) => {
         }
     }
 }
+
+export const hideMarkers = (hiding) => {
+    const markers = document.querySelectorAll('.object-html-marker')
+
+    markers.forEach(item => {
+        item.classList.remove(hiding ? 'fade-in' : 'fade-out')
+        item.classList.add(hiding ? 'fade-out' : 'fade-in')
+    })
+}

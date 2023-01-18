@@ -1,14 +1,19 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-import Wrapper from "../../Wrapper/Wrapper"
+import ItemViewer from './ItemViewer/ItemViewer'
+import RoomSelector from './RoomSelector/RoomSelector'
+import InfoViewer from './InfoViewer/InfoViewer'
+import Wrapper from "../Wrapper/Wrapper"
 
-import { setViewer } from "../../../features/dataSlice"
+import { setViewer, setItem } from "../../features/dataSlice"
+import { hideMarkers } from "../../utils"
 
 function Viewer({ children }) {
+    const [view, setView] = useState(null)
     const dispatch = useDispatch()
     
-    const { activeViewer } = useSelector(state => state.data)
+    const { activeViewer, activeItem } = useSelector(state => state.data)
 
     useEffect(() => {
         if(activeViewer){
@@ -17,13 +22,12 @@ function Viewer({ children }) {
             viewer.classList.remove('slide-up')
             viewer.classList.add('slide-down')
 
-            const markers = document.querySelectorAll('.object-html-marker')
+            viewer.style.backgroundColor = 'rgba(11, 11, 11, 0.6)'
 
-            markers.forEach(item => {
-                item.classList.remove('fade-in')
-                item.classList.add('fade-out')
-            })
+            hideMarkers(true)
         }
+
+        getContent()
     }, [activeViewer])
     
     
@@ -33,23 +37,26 @@ function Viewer({ children }) {
         viewer.classList.remove('slide-down')
         viewer.classList.add('slide-up')
 
-        const markers = document.querySelectorAll('.object-html-marker')
-
-        markers.forEach(item => {
-            item.classList.remove('fade-out')
-            item.classList.add('fade-in')
-        })
+        hideMarkers(false)
         
         setTimeout(() => {
             dispatch(setViewer(null))
+            if(activeItem) dispatch(setItem(null))
         }, 1100)
+    }
+
+    const getContent = () => {
+        activeViewer === 'item' ? setView(<ItemViewer />)
+        : activeViewer === 'room' ?setView(<RoomSelector />)
+        : activeViewer === 'info' ? setView(<InfoViewer />)
+        : null
     }
 
     return (
         <section id='viewer' className="bg-dark click-z">
             <div className="w-80 h-fill flex col flex-centre relative space-around">
                 <Wrapper>
-                    {children}
+                    {children ? children : view}
                 </Wrapper>
 
                 <div>

@@ -12,7 +12,7 @@ function Model_BedsideCabinet(props) {
       <mesh castShadow receiveShadow geometry={nodes.Cube003.geometry} material={materials.bedsideMat} />
       <mesh castShadow receiveShadow geometry={nodes.Cube003_1.geometry} material={materials['chipboardMat.001']} />
 
-      <Html position={[1.5, .5, -2]}>
+      <Html position={[1.3, 1, -2]}>
         <div className='object-html-marker' onClick={() => props.onClick('bedsideCabinet')}>
           
         </div>

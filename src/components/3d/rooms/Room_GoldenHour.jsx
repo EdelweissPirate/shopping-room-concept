@@ -1,5 +1,3 @@
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
-
 import Model_Bedframe from "../objects/Model_BedFrame"
 import Model_BedsideCabinet from "../objects/Model_BedsideCabinet"
 import Model_Drawers from "../objects/Model_Drawers"
@@ -32,10 +30,6 @@ function Room_GoldenHour({ onClick }) {
             <Model_SquareShelves onClick={onClick} />
             <Model_UnderbedStorage onClick={onClick} />
             <Model_Frames onClick={onClick} />
-
-            <EffectComposer>
-                <Bloom luminanceThreshold={1} intensity={0.85} levels={9} mipmapBlur />
-            </EffectComposer>
         </group>
     )
 }

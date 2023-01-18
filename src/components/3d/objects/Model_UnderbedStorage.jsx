@@ -10,7 +10,7 @@ function Model_UnderbedStorage(props) {
   return (
     <group {...props} dispose={null}>
       <mesh name="underBedStore" castShadow receiveShadow geometry={nodes.underBedStore.geometry} material={materials.underBedStoreMat} />
-      <Html position={[1.1, .2, -.7]}>
+      <Html position={[1.5, .75, -.7]}>
         <div className='object-html-marker' onClick={() => props.onClick('underbedStorage')}>
           
         </div>

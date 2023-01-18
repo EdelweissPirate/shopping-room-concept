@@ -9,6 +9,7 @@ import './header.css'
 function Header() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+
     const { activeViewer } = useSelector(state => state.data)
 
     const openSelector = () => {

@@ -13,7 +13,7 @@ function Model_Wardrobe(props) {
       <mesh castShadow receiveShadow  geometry={nodes.Cylinder003_1.geometry} material={materials['handleMat.001']} />
       <mesh castShadow receiveShadow  geometry={nodes.Cylinder003_2.geometry} material={materials['chipboardMat.001']} />
     
-      <Html position={[-2, 1.25, 1.7]}>
+      <Html position={[-2, 2, 1.7]}>
         <div className='object-html-marker' onClick={() => props.onClick('wardrobe')}>
           
         </div>

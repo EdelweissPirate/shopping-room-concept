@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { setRoom, setViewer } from "../../features/dataSlice"
+import { setRoom, setViewer } from "../../../features/dataSlice"
 
 function RoomSelector() {
     const dispatch = useDispatch()

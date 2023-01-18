@@ -13,7 +13,7 @@ function Model_Drawers(props) {
       <mesh castShadow receiveShadow geometry={nodes.Cube019_1.geometry} material={materials.handleMat} />
       <mesh castShadow receiveShadow geometry={nodes.Cube019_2.geometry} material={materials['chipboardMat.001']} />
 
-      <Html position={[-2, .5, .1]}>
+      <Html position={[-2, 1, .1]}>
         <div className='object-html-marker' onClick={() => props.onClick('drawers')}>
           
         </div>
