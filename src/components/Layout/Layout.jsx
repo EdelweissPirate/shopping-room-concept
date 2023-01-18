@@ -2,16 +2,17 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import Routers from '../../routers/Routers'
 
+import Marquee from "../Marquee/Marquee"
+
 function Layout() {
     
 
     return (
-        <>
-            <Routers>
-                <Header />
-                <Footer />
-            </Routers>
-        </>
+        <Routers>
+            <Marquee />
+            <Header />
+            <Footer />
+        </Routers>
     )
 }
 

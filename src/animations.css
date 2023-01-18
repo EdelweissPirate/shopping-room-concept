@@ -29,6 +29,10 @@
     animation: slide-up 1s ease-in-out forwards;
 }
 
+.anim-marquee {
+    animation: scroll-marquee 30s infinite linear;
+}
+
 /* Keyframes */
 @keyframes fade-in {
     from {
@@ -81,5 +85,14 @@
     }
     to {
         transform: translate(0, -100%);
+    }
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
     }
 }

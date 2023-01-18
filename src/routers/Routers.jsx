@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Splash from '../pages/Splash'
 import Home from '../pages/Home'
 
 function Routers({ children }) {
@@ -8,8 +7,7 @@ function Routers({ children }) {
         <Router>
             {children}
             <Routes>
-                <Route path='/' element={<Splash />} />
-                <Route path='/home' element={<Home />} />
+                <Route path='/' element={<Home />} />
             </Routes>
         </Router>
     )

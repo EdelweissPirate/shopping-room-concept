@@ -1,7 +1,4 @@
-import { Suspense } from 'react'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
-
-import Loader from '../../Loader/Loader'
 
 import Model_Bedframe from "../objects/Model_BedFrame"
 import Model_BedsideCabinet from "../objects/Model_BedsideCabinet"
@@ -20,28 +17,25 @@ import Model_Frames from '../objects/Model_Frames'
 
 function Room_GoldenHour({ onClick }) {
     return (
-        <group position={[0, 0, 0]}>
-            <Suspense fallback={<Loader />}>
-            
-                <Model_Room />
-                <Model_Window />
-                <Model_Bedframe onClick={onClick} />
-                <Model_Rug onClick={onClick} />
-                <Model_Matress />
-                <Model_Duvet onClick={onClick} />
-                <Model_Pillows />
-                <Model_BedsideCabinet onClick={onClick} />
-                <Model_Drawers onClick={onClick} />
-                <Model_Shelves onClick={onClick} />
-                <Model_Wardrobe onClick={onClick} />
-                <Model_SquareShelves onClick={onClick} />
-                <Model_UnderbedStorage onClick={onClick} />
-                <Model_Frames onClick={onClick} />
+        <group position={[0, -1, 0]}>
+            <Model_Room />
+            <Model_Window />
+            <Model_Bedframe onClick={onClick} />
+            <Model_Rug onClick={onClick} />
+            <Model_Matress />
+            <Model_Duvet onClick={onClick} />
+            <Model_Pillows />
+            <Model_BedsideCabinet onClick={onClick} />
+            <Model_Drawers onClick={onClick} />
+            <Model_Shelves onClick={onClick} />
+            <Model_Wardrobe onClick={onClick} />
+            <Model_SquareShelves onClick={onClick} />
+            <Model_UnderbedStorage onClick={onClick} />
+            <Model_Frames onClick={onClick} />
 
-                <EffectComposer>
-                    <Bloom luminanceThreshold={1} intensity={0.85} levels={9} mipmapBlur />
-                </EffectComposer>
-            </Suspense>
+            <EffectComposer>
+                <Bloom luminanceThreshold={1} intensity={0.85} levels={9} mipmapBlur />
+            </EffectComposer>
         </group>
     )
 }

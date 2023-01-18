@@ -1,15 +1,16 @@
-import Viewer from "../Viewer/Viewer"
+import { useDispatch } from "react-redux"
+import { setRoom, setViewer } from "../../features/dataSlice"
 
 function RoomSelector() {
-    const closeView = () => {
-        const roomSelector = document.querySelector('#room-selector')
-        const itemViewer = document.querySelector('#item-viewer')
-    
-        roomSelector.classList.remove('slide-down')
-        roomSelector.classList.add('slide-up')
+    const dispatch = useDispatch()
 
-        itemViewer.classList.remove('slide-in')
-        itemViewer.classList.add('slide-out')
+    const array_room = ['golden_hour', 'chill_minute']
+
+    const setActiveRoom = (arg) => {
+        const viewer = document.querySelector('#viewer')
+
+        viewer.classList.remove('slide-down')
+        viewer.classList.add('slide-up')
 
         const markers = document.querySelectorAll('.object-html-marker')
 
@@ -17,23 +18,36 @@ function RoomSelector() {
             item.classList.remove('fade-out')
             item.classList.add('fade-in')
         })
+
+        dispatch(setRoom(arg))
+        
+        setTimeout(() => {
+            dispatch(setViewer(null))
+        }, 1100)
+    }
+
+    const generateItems = () => {
+        const output = array_room.map(item => {
+            const label = item.split('_').join(' ').toUpperCase()
+
+            return (
+                <li key={item} className='mb-2'>
+                    <button className='btn btn-round w-fill' onClick={() => setActiveRoom(item)}>
+                        {label}
+                    </button>
+                </li>
+            )
+        })
+        
+        return output
     }
 
     return (
-        <Viewer id={'room-selector'}>
-            <div className="w-80 h-fill flex col flex-centre space-around relative">
-                <div>
-                    <button className='btn btn-round w-fill' onClick={() => {closeView()}}>
-                        GOLDEN-HOUR
-                    </button>
-                </div>
-                <div>
-                    <button className='btn btn-round w-fill item-close' onClick={() => {closeView()}}>
-                        CLOSE
-                    </button>
-                </div>
-            </div>
-        </Viewer>
+        <div>
+            <ul className="flex col space-around">
+                {generateItems()}
+            </ul>
+        </div>
     )
 }
 
