@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
+import Wrapper from "../../Wrapper/Wrapper"
+
 import { setViewer } from "../../../features/dataSlice"
 
 function Viewer({ children }) {
@@ -46,7 +48,9 @@ function Viewer({ children }) {
     return (
         <section id='viewer' className="bg-dark click-z">
             <div className="w-80 h-fill flex col flex-centre relative space-around">
-                {children}
+                <Wrapper>
+                    {children}
+                </Wrapper>
 
                 <div>
                     <button className='btn btn-round w-fill' onClick={() => {handleClose()}}>

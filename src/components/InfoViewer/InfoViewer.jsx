@@ -4,7 +4,7 @@ import './infoViewer.css'
 
 function InfoViewer() {
     return (
-        <Wrapper>
+        // <Wrapper>
             <div id="info-content">
                 <h2>INFO</h2>
                 <p>
@@ -28,11 +28,15 @@ function InfoViewer() {
                 </p>
 
                 <p>
+                    Next, I'd like to fill the room with random junk to rally sell the realism and then add more rooms when i get the time. 
+                </p>
+
+                <p>
                     -- END --
                 </p>
 
             </div>
-        </Wrapper>
+        // </Wrapper>
     )
 }
 
