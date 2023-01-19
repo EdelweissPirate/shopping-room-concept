@@ -24,7 +24,7 @@ function InfoViewer() {
                 </p>
 
                 <p>
-                    I also wanted the light from the window to afect the scene but threejs's emmissive material only 'glows' by lighting up the area around it, and has no directional capabilities. My solution to this was to bake the model's textures in blender containing the light data as a static image.
+                    I also wanted the light from the window to affect the scene but threejs's emissive material only 'glows' by lighting up the area around it, and has no directional capabilities. My solution to this was to bake the model's textures in blender containing the light data as a static image.
                 </p>
 
                 <p>
@@ -32,7 +32,7 @@ function InfoViewer() {
                 </p>
 
                 <p>
-                    Next, I'd like to fill the room with random junk to rally sell the realism and then add more rooms when i get the time. 
+                    Next, I'd like to fill the room with random junk to really sell the realism and then add more rooms when i get the time. 
                 </p>
                 <p>---</p>
 

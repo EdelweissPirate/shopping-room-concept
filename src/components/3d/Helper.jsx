@@ -9,7 +9,7 @@ function Helper() {
         <Html position={[-3.25, 1, 0]} style={{width: '300px'}}>
             <div className="w-80 h-fill">
                 {!activeViewer && <h1 className='textCenter'>
-                    CLICK <FaBed /> TO SELECT A ROOM
+                    CLICK <FaBed /> IN THE HEADER TO SELECT A ROOM
                 </h1>}
             </div>
         </Html>
